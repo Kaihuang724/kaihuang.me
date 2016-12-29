@@ -8,16 +8,43 @@
 
 .main {
     flex-direction: column;
-    background-color: #fff;
+    background-color: $white;
     padding: 1.2em;
+    color: $black;
 
     .title {
         font-family: $header-font;
-        font-size: 8em;
+        font-size: 10em;
     }
 
     .tagline {
         font-family: $font-family;
         line-height: 1.4em;
+    }
+}
+
+.projects {
+    background-color: $white;
+    padding: 1.5em;
+
+    h2 {
+        font-family: $header-font;
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .project {
+        height: 300px;
+
+        h3 {
+            font-family: $header-font;
+            font-size: 2em;
+        }
+
+        h5 {
+            font-family: $font-family;
+            font-size: 1em;
+        }
     }
 }
