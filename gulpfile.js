@@ -4,6 +4,7 @@ var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var inject = require('gulp-inject');
+var webserver = require('gulp-webserver');
 
 gulp.task('styles', function() {
     gulp.src('./src/sass/**/*.scss')
@@ -20,11 +21,23 @@ gulp.task('styles', function() {
 
 gulp.task('html', ['styles'], function() {
     var injectFiles = gulp.src(['./dist/css/main.css'])
+    var injectOptions = {
+        addRootSlash: false,
+        ignorePath: ['dist']
+    };
 
     gulp.src('./src/index.html')
-        .pipe(inject(injectFiles))
+        .pipe(inject(injectFiles, injectOptions))
     .pipe(gulp.dest('./dist/'))
 })
+
+gulp.task('serve', function() {
+    gulp.src('dist')
+        .pipe(webserver({
+        livereload: true,
+        open: true
+    }));
+});
 
 gulp.task('default', function() {
     gulp.watch('./src/sass/**/*.scss', ['styles']);

@@ -3,6 +3,11 @@ html {
   font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
 }
 
+// Define Background Color
+body {
+    background-color: $body-bg;
+}
+
 // Vertically center anything
 .vertical-center {
   display: flex;

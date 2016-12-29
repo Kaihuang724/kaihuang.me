@@ -1,0 +1,23 @@
+// Homepage Layout
+
+.header {
+    height: 50px;
+    background-color: $primary-bg;
+    color: $white;
+}
+
+.main {
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1.2em;
+
+    .title {
+        font-family: $header-font;
+        font-size: 8em;
+    }
+
+    .tagline {
+        font-family: $font-family;
+        line-height: 1.4em;
+    }
+}

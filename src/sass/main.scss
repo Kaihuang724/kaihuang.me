@@ -1,7 +1,10 @@
 /* Main SCSS File */
+// Font Imports
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans');
 
 // Base
 @import "variables";
 
 // Components
 @import "scaffolding";
+@import "homepage";

@@ -1,3 +1,6 @@
+// Bootstrap Flex-box
+$enable-flex: true;
+
 // Typography
 
 $font-style: normal;
@@ -6,4 +9,12 @@ $font-weight: normal;
 $font-color: #222;
 $font-size: 1rem;
 $line-height: 1.2;
-$font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$header-font: Bree Serif, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+// Colors
+
+$white: #f3f3f3;
+$black: #222222;
+$body-bg: #f9f9d9;
+$primary-bg: #277f7b;
