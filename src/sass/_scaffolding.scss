@@ -3,9 +3,14 @@ html {
   font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
 }
 
-// Define Background Color
+// Document Global Styles
+.container {
+    max-width: 50em;
+}
+
 body {
     background-color: $body-bg;
+    border-top: 3px solid $black;
 }
 
 // Vertically center anything

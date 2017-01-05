@@ -1,50 +1,61 @@
 // Homepage Layout
 
-.header {
-    height: 50px;
-    background-color: $primary-bg;
-    color: $white;
-}
-
 .main {
     flex-direction: column;
-    background-color: $white;
-    padding: 1.2em;
+    padding: 1.2em 0;
     color: $black;
 
     .title {
         font-family: $header-font;
-        font-size: 10em;
+        font-size: 6em;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: 0.3em;
+        margin-bottom: 0.4em;
     }
 
     .tagline {
         font-family: $font-family;
-        line-height: 1.4em;
+        font-size: 1.2em;
+        letter-spacing: -0.01em;
+        line-height: 2em;
+        font-weight: 300;
+
+        .emphasis {
+            font-weight: 500;
+        }
+
+        a {
+            border-bottom: 1px solid #0275d8;
+            padding-bottom: 2px;
+
+            &:hover {
+                text-decoration: none;
+                border-bottom: 2px solid #014c8c;
+            }
+        }
     }
 }
 
-.projects {
-    background-color: $white;
-    padding: 1.5em;
+.proficiencies {
+    flex-direction: row;
+    color: $black;
 
-    h2 {
+    h3 {
+        color: $black;
         font-family: $header-font;
-        font-size: 3em;
-        text-align: center;
-        margin-bottom: 1em;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        letter-spacing: 0.02em;
+        font-weight: 900;
+        padding-left: 0;
     }
 
-    .project {
-        height: 300px;
+    .development {
+        padding-left: 0;
+    }
 
-        h3 {
-            font-family: $header-font;
-            font-size: 2em;
-        }
-
-        h5 {
-            font-family: $font-family;
-            font-size: 1em;
-        }
+    .design {
+        padding-left: 0;
     }
 }
