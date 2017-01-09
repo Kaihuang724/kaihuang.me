@@ -26,7 +26,7 @@ gulp.task('html', ['styles'], function() {
         ignorePath: ['dist']
     };
 
-    gulp.src('./src/index.html')
+    gulp.src('./src/*.html')
         .pipe(inject(injectFiles, injectOptions))
     .pipe(gulp.dest('./dist/'))
 })
