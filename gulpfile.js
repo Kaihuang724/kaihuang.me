@@ -5,6 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var inject = require('gulp-inject');
 var webserver = require('gulp-webserver');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('styles', function() {
     gulp.src('./src/sass/**/*.scss')
@@ -39,7 +40,14 @@ gulp.task('serve', function() {
     }));
 });
 
+gulp.task('images', () =>
+    gulp.src('src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'))
+);
+
 gulp.task('default', function() {
     gulp.watch('./src/sass/**/*.scss', ['styles']);
+    gulp.watch('./src/images/*', ['images']);
     gulp.watch('./src/*.html', ['html']);
 })

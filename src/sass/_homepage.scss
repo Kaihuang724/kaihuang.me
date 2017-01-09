@@ -119,23 +119,46 @@
     }
 
     .caseStudy {
-        a {
-            border-bottom: 2px solid $dark;
-            padding-bottom: 3px;
+        margin: 0.5em 0;
+        border: none;
+        border-radius: 0;
+        overflow: hidden;
 
-            h2 {
-                font-family: $font-family;
-                font-weight: 500;
-                font-size: 2em;
-                padding: 0.5em 0;
-            }
+        img {
+            max-width: 100%;
+            transform: translate3d(-100%, 0px, 0px);
+        }
 
-            &:hover {
-                font-weight: 500;
+        .card-img-overlay {
+            padding: 1.25em 0;
+
+            a {
                 text-decoration: none;
-                border-bottom: 3px solid $dark;
-                transition: all 0.08s;
+
+                h2 {
+                    color: $dark;
+                    font-family: $font-family;
+                    font-weight: 500;
+                    font-size: 1.8em;
+
+                    &:hover {
+                        font-weight: 700;
+                        transition: font-weight 0.2s;
+                    }
+                }
+
+                p {
+                    color: $dark;
+                    font-family: $font-family;
+                    font-weight: 300;
+                    font-size: 1.2em;
+                }
             }
+        }
+
+        &:hover img {
+            transform: translate3d(0, 0, 0);
+            transition: transform 0.5s;
         }
     }
 }

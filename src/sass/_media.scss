@@ -1,0 +1,14 @@
+/* Medium. Above 48em (768px) */
+@media screen and (max-width: 48em) {
+    .caseStudies {
+        .caseStudy {
+            img {
+                display: none;
+            }
+
+            .card-img-overlay {
+                position: relative;
+            }
+        }
+    }
+}
