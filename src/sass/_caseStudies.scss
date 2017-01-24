@@ -5,13 +5,13 @@
 
     a {
         font-family: $font-family;
+        font-size: 1.5em;
         font-weight: 400;
         color: $dark;
         border-bottom: 2px solid $dark;
         padding-bottom: 3px;
 
         &:hover {
-            font-weight: 500;
             text-decoration: none;
             border-bottom: 3px solid $dark;
             transition: all 0.08s;
@@ -92,5 +92,6 @@
         max-width: 100%;
         border: 1px solid $light;
         border-radius: 4.5px;
+        background-color: #f3f3f3;
     }
 }
