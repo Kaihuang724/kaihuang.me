@@ -35,15 +35,16 @@
 
         a {
             font-weight: 400;
-            color: $dark;
-            border-bottom: 2px solid $dark;
+            color: $med;
+            border-bottom: 1px solid $med;
             padding-bottom: 3px;
 
             &:hover {
+                color: $dark;
                 font-weight: 500;
                 text-decoration: none;
-                border-bottom: 3px solid $dark;
-                transition: all 0.08s;
+                border-bottom: 1px solid $dark;
+                transition: all 0.1s;
             }
         }
     }
@@ -126,7 +127,7 @@
 
         img {
             max-width: 100%;
-            transform: translate3d(-100%, 0px, 0px);
+            transform: translate3d(-105%, 0px, 0px);
         }
 
         .card-img-overlay {
