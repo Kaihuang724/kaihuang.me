@@ -121,6 +121,9 @@
 
     .caseStudy {
         margin: 0.5em 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
         border: none;
         border-radius: 0;
         overflow: hidden;
@@ -130,26 +133,74 @@
             transform: translate3d(-105%, 0px, 0px);
         }
 
-        .card-img-overlay {
-            padding: 1.25em 0;
+        .link {
+            outline: none;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            color: $light;
+            font-family: $header-font;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 4em;
+            line-height: 0.8em;
+        }
 
-            a {
-                text-decoration: none;
+        .link--kukuri {
+        	text-transform: uppercase;
+        	font-weight: 900;
+        	overflow: hidden;
+        	line-height: 0.75;
+        	color: $light;
+        }
 
-                h2 {
-                    color: $dark;
-                    font-family: $font-family;
-                    font-weight: 500;
-                    font-size: 1.8em;
-                }
+        .link--kukuri:hover {
+        	color: $light;
+        }
 
-                p {
-                    color: $dark;
-                    font-family: $font-family;
-                    font-weight: 300;
-                    font-size: 1.2em;
-                }
-            }
+        .link--kukuri::after {
+        	content: '';
+        	position: absolute;
+        	height: 16px;
+        	width: 100%;
+        	top: 50%;
+        	margin-top: -8px;
+        	right: 0;
+        	background: $white;
+        	-webkit-transform: translate3d(-100%,0,0);
+        	transform: translate3d(-100%,0,0);
+        	-webkit-transition: -webkit-transform 0.4s;
+        	transition: transform 0.4s;
+        	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        }
+
+        .link--kukuri:hover::after {
+        	-webkit-transform: translate3d(100%,0,0);
+        	transform: translate3d(100%,0,0);
+        }
+
+        .link--kukuri::before {
+        	content: attr(data-letters);
+        	position: absolute;
+        	z-index: 2;
+        	overflow: hidden;
+        	color: $med;
+        	white-space: nowrap;
+        	width: 0%;
+        	-webkit-transition: width 0.4s 0.3s;
+        	transition: width 0.4s 0.3s;
+        }
+
+        .link--kukuri:hover::before {
+        	width: 100%;
+        }
+
+        p {
+            color: $dark;
+            font-family: $font-family;
+            font-weight: 300;
+            font-size: 1em;
         }
 
         &:hover img {
@@ -180,6 +231,12 @@
 
     i {
         padding: 5px;
+        color: $light;
+
+        &:hover {
+            color: $med;
+            transition: all 0.3s;
+        }
     }
 
     .footer {
@@ -189,6 +246,21 @@
         padding-top: 30px;
         line-height: 2em;
         font-weight: 300;
+
+        a {
+            font-weight: 400;
+            color: $med;
+            border-bottom: 1px solid $med;
+            padding-bottom: 3px;
+
+            &:hover {
+                color: $dark;
+                font-weight: 500;
+                text-decoration: none;
+                border-bottom: 1px solid $dark;
+                transition: all 0.1s;
+            }
+        }
     }
 
     .copyright {
