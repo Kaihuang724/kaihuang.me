@@ -18,6 +18,7 @@
             <p class="tagline">Poqet is an innovative way for customers to purchase items from a vending machine. Users will be able to look for products that are Poqet-connecte within their area, reserve their products directly from their phone, then go pick them up using a PIN or QR code. The entire platform required a web app, backend platform, and a mobile app platform. I co-founded the company to provide an original retail experience for users.</p>
             <p class="tagline">The service is set to launch mid-2017.</p>
             <p class="tagline"><span class="emphasis">Technologies used:</span> React Native (iOS and Android app), React (web app), and noSQL (DB management). </p>
+            <p class="disclaimer">All screenshots shown here are mockups that are currently in various stages of production. Final results may change as new features are added and will be updated accordingly on this page.</p>
         </section>
         <section class="row CS-subSection">
             <h3 class="col-12"> My Role </h3>
@@ -31,28 +32,39 @@
         <section class="row CS-subSection">
             <h3 class="col-12"> Project Management </h3>
             <p> As the Chief Product Officer, one of my responsibilities includes making sure the project is on track and progressing smoothly. In order to ensure this, we set up multiple meetings to figure out our sprints and plan feature development. We used Jira for our project management tool, with Slack and BitBucket integration. We set up stories for each task to make sure we covered potential feature.</p>
-            <img class"img-fluid" src="./images/CSP-PostDesign.jpg" />
+            <img class="img-fluid" src="./images/Poqet-Jira.png" />
         </section>
         <section class="row CS-subSection">
             <h3 class="col-12"> Mobile UI Design </h3>
             <p> Poqet's mobile app design was built in Sketch. After our UX Research, we wanted to make sure the design gave users an efficient way to search for nearby locations, check inventory, then make their purchase. The secondary functionality included getting product information, and social features. </p>
             <p> <span class="emphasis">Location Searching:</span> We used geolocation features from native iOS and Android to determine the user's location on launch. Then the home page automatically displayed the closest machines available for the user. We also allow the user to enter a custom location to search for machines.</p>
-            <img class"img-fluid" src="./images/BDAS-PlacedJob.png" />
+            <img class="col-xs-12" src="./images/Poqet-Homepage.jpg" />
+            <img class="col-xs-12" src="./images/Poqet-MachineList.jpg" />
             <br />
             <p> <span class="emphasis">Product Purchasing:</span> This piece of functionality was the most important part for our user. We wanted it to be as easy as possible for the user to make the purchase after selecting the machine and product. Once the user makes the purchase, they'll receive a PIN number that they will enter at the vending machine to retrieve their product.</p>
-            <img class"img-fluid" src="./images/BDAS-PlacedJob.png" />
+            <img class="col-xs-12" src="./images/Poqet-MachineDetails.jpg" />
+            <img class="col-xs-12" src="./images/Poqet-SearchResults.jpg" />
             <br />
             <p> <span class="emphasis">Social Features</span> We wanted to include social features for our users to allow them a different aspect to their retail experience. The user will be able to share their purchases with friends, gift products, and rate products.</p>
-            <img class"img-fluid" src="./images/BDAS-PlacedJob.png" />
-            <br />
+            <img class="img-fluid" src="./images/BDAS-PlacedJob.png" />
         </section>
         <section class="row CS-subSection">
             <h3 class="col-12"> Mobile Development </h3>
-            <p> CSP is still a work in progress and is constantly being revised and iterated upon. The initial redesign that we have accomplished helped streamline the entire process of finding a candidate for recruiters. The modern, updated look was well received across the board, but introduced its own set of problems.</p>
+            <p> I took lead on the mobile development for both iOS and Android platforms. Because our web app is built in React, I decided to use React Native as the framework for development. This allowed me to develop for both platforms simultaneously while retaining the speed and functionality afforded by native platforms. The initial build for our mobile app took about 4 months, and work is still ongoing for polish. The main things I was looking for in the framework was:</p>
+            <ul>
+                <li>Performance (as close to native as possible)</li>
+                <li>Scalability</li>
+                <li>Integration with database</li>
+            </ul>
+            <p>React Native fit all these criteria and helped us build our app much quicker and more efficient than we could've otherwise using native mobile development methods.</p>
+            <p>We ran into a couple issues with state management in the app. Specifically, we needed to maintain multiple states as the user makes purchases, adds products to cart, writes reviews, etc. We decided to utilize Redux, a state management method, in order to maintain a concise app state. This allowed our app to run efficiently and pass only needed data back and forth between views.</p>
+            <img class="img-fluid" src="./images/Poqet-Atom1.png" />
+            <img class="img-fluid" src="./images/Poqet-Atom2.png" />
         </section>
         <section class="row CS-subSection">
             <h3 class="col-12"> Ongoing Work </h3>
-            <p> As with any software redesign, a learning curve will rear its head once the changes have been launched. We're currently working with users to guide them on how to use the new features as intended as well as document any improvements that are suggested.</p>
+            <p> The service is still in development, and we have many features on the way that will expand upon previous functionality. This includes everything from custom machine circuit board design to proximity sensing to allow users to retrieve items without taking out their phones. The exciting part of building an innovative platform is the endless possibilities of what can be implemented.</p>
+            <p> The platform is set to launch later this year. This site will be updated with any new information.</p>
         </section>
     </div>
 </body>
