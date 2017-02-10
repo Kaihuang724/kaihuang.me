@@ -40,7 +40,7 @@
             text-decoration: none;
             position: relative;
             display: inline-block;
-            color: $light;
+            color: $med;
             overflow: hidden;
             border-bottom: 1px solid $light;
 
@@ -58,7 +58,7 @@
             &::after {
                 content: '';
                 position: absolute;
-                height: 2px;
+                height: 3px;
                 width: 100%;
                 top: 50%;
                 right: 0;
@@ -281,7 +281,7 @@
             text-decoration: none;
             position: relative;
             display: inline-block;
-            color: $light;
+            color: $med;
             overflow: hidden;
             border-bottom: 1px solid $light;
 
@@ -299,7 +299,7 @@
             &::after {
                 content: '';
                 position: absolute;
-                height: 2px;
+                height: 3px;
                 width: 100%;
                 top: 50%;
                 right: 0;
