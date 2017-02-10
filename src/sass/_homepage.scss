@@ -41,8 +41,7 @@
             position: relative;
             display: inline-block;
             color: $med;
-            overflow: hidden;
-            border-bottom: 1px solid $light;
+            border-bottom: 1px solid $med;
 
             &:hover {
                 &::after {
@@ -55,22 +54,6 @@
                 }
             }
 
-            &::after {
-                content: '';
-                position: absolute;
-                height: 3px;
-                width: 100%;
-                top: 50%;
-                right: 0;
-                background: #f3f3f3;
-                -webkit-transform: translate3d(-100%,0,0);
-                transform: translate3d(-100%,0,0);
-                -webkit-transition: -webkit-transform 0.4s;
-                transition: transform 0.4s;
-                -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-                transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-            }
-
             &::before {
                 content: attr(data-letters);
                 position: absolute;
@@ -79,8 +62,8 @@
                 color: $dark;
                 white-space: nowrap;
                 width: 0%;
-                -webkit-transition: width 0.4s 0.3s;
-                transition: width 0.4s 0.3s;
+                -webkit-transition: width 0.3s 0.2s;
+                transition: width 0.3s 0.2s;
             }
         }
     }
@@ -282,7 +265,6 @@
             position: relative;
             display: inline-block;
             color: $med;
-            overflow: hidden;
             border-bottom: 1px solid $light;
 
             &:hover {
@@ -296,22 +278,6 @@
                 }
             }
 
-            &::after {
-                content: '';
-                position: absolute;
-                height: 3px;
-                width: 100%;
-                top: 50%;
-                right: 0;
-                background: #f3f3f3;
-                -webkit-transform: translate3d(-100%,0,0);
-                transform: translate3d(-100%,0,0);
-                -webkit-transition: -webkit-transform 0.4s;
-                transition: transform 0.4s;
-                -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-                transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-            }
-
             &::before {
                 content: attr(data-letters);
                 position: absolute;
@@ -320,8 +286,8 @@
                 color: $dark;
                 white-space: nowrap;
                 width: 0%;
-                -webkit-transition: width 0.4s 0.3s;
-                transition: width 0.4s 0.3s;
+                -webkit-transition: width 0.3s 0.2s;
+                transition: width 0.3s 0.2s;
             }
         }
     }
