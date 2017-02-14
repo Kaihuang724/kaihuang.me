@@ -85,6 +85,11 @@
             line-height: 1.6em;
             font-weight: 300;
 
+            .emphasis {
+                font-weight: 500;
+                color: $dark;
+            }
+
             .link {
                 font-family: $font-family;
                 font-weight: 500;
