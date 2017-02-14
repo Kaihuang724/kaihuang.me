@@ -1,0 +1,125 @@
+.playground-main {
+    flex-direction: column;
+    padding: 1.2em 0;
+    color: $med;
+
+    .link {
+        font-family: $header-font;
+        font-weight: 900;
+        font-size: 1.5em;
+        outline: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        color: $light;
+        overflow: hidden;
+        border-bottom: 1px solid $light;
+        padding-bottom: 10px;
+
+        &:hover {
+            &::after {
+                -webkit-transform: translate3d(100%,0,0);
+                transform: translate3d(100%,0,0);
+            }
+
+            &::before {
+                width: 100%;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            top: 35%;
+            right: 0;
+            background: $white;
+            -webkit-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
+            -webkit-transition: -webkit-transform 0.4s;
+            transition: transform 0.4s;
+            -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+            transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        }
+
+        &::before {
+            content: attr(data-letters);
+            position: absolute;
+            z-index: 2;
+            overflow: hidden;
+            color: $med;
+            white-space: nowrap;
+            width: 0%;
+            -webkit-transition: width 0.4s 0.3s;
+            transition: width 0.4s 0.3s;
+        }
+    }
+
+    .title {
+        font-family: $header-font;
+        font-size: 4em;
+        font-weight: 900;
+        color: $light;
+        text-transform: uppercase;
+        margin-top: 0.3em;
+        margin-bottom: 0.4em;
+    }
+
+    .project {
+        img {
+            padding: 0.5em;
+            height: auto;
+            width: auto;
+            max-height: 600px;
+            max-width: 100%;
+            border: 1px solid $light;
+            border-radius: 4.5px;
+            background-color: #f3f3f3;
+        }
+
+        .projectText {
+            font-family: $font-family;
+            letter-spacing: -0.01em;
+            line-height: 1.6em;
+            font-weight: 300;
+
+            .link {
+                font-family: $font-family;
+                font-weight: 500;
+                outline: none;
+                text-decoration: none;
+                position: relative;
+                display: inline-block;
+                color: $med;
+                border-bottom: none;
+                margin-top: 20px;
+                text-transform: none;
+
+                &:hover {
+                    &::after {
+                        -webkit-transform: translate3d(100%,0,0);
+                        transform: translate3d(100%,0,0);
+                    }
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                &::before {
+                    content: attr(data-letters);
+                    position: absolute;
+                    z-index: 2;
+                    overflow: hidden;
+                    color: $dark;
+                    white-space: nowrap;
+                    width: 0%;
+                    -webkit-transition: width 0.3s 0.2s;
+                    transition: width 0.3s 0.2s;
+                }
+            }
+        }
+    }
+}
